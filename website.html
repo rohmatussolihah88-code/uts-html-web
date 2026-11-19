@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rohmatussolihah | My Little Space</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --pink: #e9b6c9;
+    --pink-dark: #bd829e;
+    --purple: #a994c7;
+    --cream: #fffaf5;
+    --text: #78677d;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+html {
+    scroll-padding-top: 90px;
+}
+
+/* NAVBAR */
+
+header {
+    width: 100%;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fffaf5ee;
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px #c8a7b322;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--pink-dark);
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 12px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--pink-dark);
+}
+
+/* HOME */
+
+.home {
+    min-height: 650px;
+    padding: 75px 10%;
+    text-align: center;
+    background:
+    radial-gradient(circle at 10% 20%, #f7dce8 0, transparent 30%),
+    radial-gradient(circle at 90% 70%, #e8def8 0, transparent 30%),
+    linear-gradient(135deg, #fff5f2, #f6edfa);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.small-title {
+    color: var(--pink-dark);
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.home h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 53px;
+    margin: 15px 0 5px;
+    color: #816b91;
+}
+
+.home h1 span {
+    color: #d38eac;
+}
+
+/* GAMBAR DI BAWAH JUDUL */
+
+.anime {
+    width: 220px;
+    height: 240px;
+    margin: 20px auto;
+    padding: 8px;
+    background: white;
+    border-radius: 48% 48% 35% 35%;
+    box-shadow: 0 12px 35px #c9a2bc55;
+    transform: rotate(-3deg);
+    transition: .4s;
+}
+
+.anime:hover {
+    transform: rotate(3deg) scale(1.05);
+}
+
+.anime img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.home p {
+    max-width: 520px;
+    font-size: 13px;
+    line-height: 2;
+    color: #8d7b91;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 13px 28px;
+    border-radius: 30px;
+    background: linear-gradient(120deg, #d99bb8, #b5a0d2);
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    box-shadow: 0 6px 18px #c99ab755;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+}
+
+/* RUNNING TEXT */
+
+.running {
+    padding: 15px;
+    background: #eadcf0;
+    color: #947ba6;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.running span {
+    display: inline-block;
+    animation: berjalan 20s linear infinite;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+@keyframes berjalan {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+/* SECTION UMUM */
+
+section {
+    padding: 85px 10%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title small {
+    color: #c18eaa;
+    letter-spacing: 4px;
+    font-size: 11px;
+}
+
+.section-title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 37px;
+    color: #927ba5;
+    margin-top: 8px;
+}
+
+/* CERITAKU */
+
+.story {
+    background: #fffaf5;
+}
+
+.story-card {
+    max-width: 850px;
+    margin: auto;
+    padding: 45px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 10px 35px #cdb8cf33;
+    position: relative;
+    border: 1px solid #f4e6ed;
+}
+
+.story-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    color: #b584a4;
+    margin-bottom: 20px;
+}
+
+.story-card p {
+    font-size: 13px;
+    line-height: 2.3;
+    color: #887a8c;
+}
+
+.story-decoration {
+    text-align: right;
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+/* BIODATA */
+
+.biodata {
+    background: linear-gradient(130deg, #f9eaf0, #f0eafa);
+}
+
+.bio-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 30px;
+    align-items: stretch;
+}
+
+.bio-profile {
+    background: white;
+    border-radius: 28px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 8px 25px #b99ebc33;
+}
+
+.bio-avatar {
+    width: 125px;
+    height: 125px;
+    margin: auto;
+    border-radius: 50%;
+    background: linear-gradient(130deg, #f4c9d8, #d9c8ef);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 65px;
+}
+
+.bio-profile h3 {
+    font-family: 'Playfair Display', serif;
+    color: #a47c9f;
+    margin-top: 18px;
+    font-size: 22px;
+}
+
+.bio-profile p {
+    font-size: 12px;
+    margin-top: 8px;
+    line-height: 1.8;
+}
+
+.bio-detail {
+    background: white;
+    border-radius: 28px;
+    padding: 35px;
+    box-shadow: 0 8px 25px #b99ebc33;
+}
+
+.bio-detail h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    color: #a47c9f;
+    margin-bottom: 20px;
+}
+
+.bio-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 13px 0;
+    border-bottom: 1px dashed #ead9e7;
+    font-size: 12px;
+}
+
+.bio-row span:first-child {
+    color: #b58aa8;
+    font-weight: 600;
+}
+
+.bio-row span:last-child {
+    text-align: right;
+}
+
+/* SKILLS */
+
+.skills {
+    background: #fffaf5;
+}
+
+.skill-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.skill-card {
+    padding: 35px 20px;
+    text-align: center;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px #cdb9cf33;
+    transition: .4s;
+    border: 1px solid #f4e7ee;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px) rotate(-1deg);
+    background: #fff0f5;
+}
+
+.skill-icon {
+    font-size: 42px;
+}
+
+.skill-card h3 {
+    color: #ac83a5;
+    margin: 15px 0 10px;
+}
+
+.skill-card p {
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* HOBIKU */
+
+.hobby {
+    background: linear-gradient(135deg, #f6e5ed, #eee8f9);
+}
+
+.hobby-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.hobby-card {
+    background: #fffdfd;
+    border-radius: 25px;
+    padding: 28px 15px;
+    text-align: center;
+    box-shadow: 0 8px 25px #bba5c633;
+    transition: .4s;
+}
+
+.hobby-card:hover {
+    transform: translateY(-10px);
+    background: #fff5f8;
+}
+
+.sticker {
+    font-size: 55px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.hobby-card h3 {
+    color: #a47c9f;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.hobby-card p {
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+/* CONTACT */
+
+.contact {
+    background: #fffaf5;
+}
+
+.contact-container {
+    max-width: 850px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 10px 35px #cdb8cf33;
+}
+
+.contact-info {
+    background: linear-gradient(145deg, #e9c4d7, #d7c8ed);
+    padding: 40px 30px;
+    color: white;
+}
+
+.contact-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 12px;
+    line-height: 2;
+}
+
+.contact-info .contact-icon {
+    font-size: 50px;
+    margin-top: 35px;
+}
+
+.contact-form {
+    padding: 35px;
+}
+
+.contact-form h3 {
+    color: #a47c9f;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #eadce9;
+    border-radius: 12px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    background: #fffcfd;
+}
+
+input:focus, textarea:focus {
+    border-color: #c99ab7;
+}
+
+textarea {
+    height: 110px;
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    background: linear-gradient(120deg, #d99bb8, #b5a0d2);
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: .3s;
+}
+
+button:hover {
+    opacity: .85;
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #eee3f0;
+    color: #927d9d;
+    font-size: 12px;
+}
+
+footer span {
+    color: #cf8ba9;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 750px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .home h1 {
+        font-size: 36px;
+    }
+
+    .bio-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hobby-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .story-card {
+        padding: 25px;
+    }
+
+    .bio-row {
+        font-size: 10px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 380px) {
+    .hobby-container {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+    <div class="logo">♡ Rohma's Space</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#story">Ceritaku</a>
+        <a href="#biodata">Biodata</a>
+        <a href="#skills">Skills</a>
+        <a href="#hobby">Hobiku</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+
+<!-- HOME -->
+
+<div class="home" id="home">
+
+    <div class="small-title">
+        ✿ WELCOME TO MY LITTLE SPACE ✿
+    </div>
+
+    <h1>Hello, I'm <span>Rohmatussolihah!</span></h1>
+
+    <!-- GAMBAR DI BAWAH TULISAN HELLO -->
+
+    <div class="anime">
+    <img src="anime-girl.png"
+         alt="Ilustrasi gadis anime di taman pastel yang indah">
+</div>
+    <p>
+        Assalamu'alaikum! Selamat datang di website kecilku.
+        Di sini aku ingin berbagi sedikit cerita,
+        mengenalkan diriku, dan menyimpan berbagai
+        hal sederhana yang menjadi bagian dari hidupku.
+    </p>
+
+    <a href="#story" class="btn">Kenali Aku Lebih Dekat ♡</a>
+
+</div>
+
+
+<!-- RUNNING TEXT -->
+
+<div class="running">
+    <span>
+        ✿ KEEP PRAYING ✿ KEEP LEARNING ✿ BE KIND
+        ✿ NEVER GIVE UP ✿ ALWAYS BE GRATEFUL ✿
+    </span>
+</div>
+
+
+<!-- CERITAKU -->
+
+<section class="story" id="story">
+
+    <div class="section-title">
+        <small>A LITTLE STORY ABOUT ME</small>
+        <h2>Ceritaku ♡</h2>
+    </div>
+
+    <div class="story-card">
+
+        <h3>Setiap Orang Punya Cerita...</h3>
+
+        <p>
+           ✿ Sedikit Cerita Tentang Aku ✿
+
+Halo! Sebelum kalian bergeser ke bawah dan melihat biodataku, ada baiknya kalian membaca sedikit cerita tentang perjalanan hidupku. Sebenarnya, aku berasal dari Lampung dan lahir di sana. Namun, karena pekerjaan Ayah yang mengharuskan kami pindah, akhirnya aku dan keluarga menetap di Palembang. Dari sekian banyak anak-anak nenek, mungkin keluargakulah yang tinggal paling jauh dari beliau. Setiap Hari Raya tiba, kami selalu menyempatkan diri untuk mudik ke rumah Nenek, melepas rindu sekaligus menjenguk beliau. Setelah liburan selesai, kami pun kembali ke Palembang, tepatnya ketika aku hendak kembali ke pondok.
+
+Perjalanan pendidikanku membawaku ke tempat yang cukup jauh, yaitu Cilacap, Jawa Tengah. Aku  mondok di Pondok Pesantren Al-Ihya Ulumaddin dan melanjutkan pendidikan kuliah di Universitas Nahdlatul Ulama Al-Ghazali Cilacap. Ada satu hal yang cukup menarik selama tinggal di Cilacap, yaitu bahasa daerahnya yang dikenal dengan bahasa Ngapak. Menurutku, bahasa Ngapak memiliki ciri khas yang lucu, unik, dan cukup berbeda dari bahasa yang biasa aku gunakan. Namun, ternyata tidak membutuhkan waktu lama bagiku untuk mulai terbiasa, bahkan sampai mahir menggunakannya.
+
+Lucunya, setiap kali aku pulang ke rumah, tidak jarang orang-orang justru menertawakan gaya bahasa dan cara bicaraku yang sudah berubah. Mungkin karena terlalu sering menggunakan bahasa Ngapak, sampai-sampai kebawa ketika berbicara di rumah. 😁 Itulah sedikit ceritakuu, mulai dari Lampung, Palembang, hingga akhirnya sampai di Cilacap. Setiap tempat punya cerita dan kenangannya masing-masing. Nah, itu ceritaku, sampai jumpa di cerita berikutnya! ♡
+        </p>
+
+        <div class="story-decoration">
+            🌷 ♡ ✨
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BIODATA -->
+
+<section class="biodata" id="biodata">
+
+    <div class="section-title">
+        <small>LET ME INTRODUCE MYSELF</small>
+        <h2>Tentang Diriku 🌸</h2>
+    </div>
+
+    <div class="bio-container">
+
+        <div class="bio-profile">
+
+            <div class="bio-avatar">🌷</div>
+
+            <h3>Rohmatussolihah</h3>
+
+            <p>
+                Mahasiswi Informatika
+                <br>
+                Universitas Nahdlatul Ulama Al-Ghazali
+            </p>
+
+            <p style="margin-top:20px; color:#bc8ba9;">
+                "Menjadi pribadi yang baik,
+                ramah, dan bermanfaat."
+            </p>
+
+        </div>
+
+        <div class="bio-detail">
+
+            <h3>My Biodata ♡</h3>
+
+            <div class="bio-row">
+                <span>Nama</span>
+                <span>Rohmatussolihah</span>
+            </div>
+
+            <div class="bio-row">
+                <span>Tempat Lahir</span>
+                <span>Kota Baru</span>
+            </div>
+
+            <div class="bio-row">
+                <span>Tanggal Lahir</span>
+                <span>05 April 2007</span>
+            </div>
+
+            <div class="bio-row">
+                <span>Pendidikan</span>
+                <span>Universitas Nahdlatul Ulama Al-Ghazali</span>
+            </div>
+
+            <div class="bio-row">
+                <span>Program Studi</span>
+                <span>Informatika</span>
+            </div>
+
+            <div class="bio-row">
+                <span>Cita-cita</span>
+                <span>Dokter</span>
+            </div>
+
+            <div class="bio-row">
+                <span>Prinsip Hidup</span>
+                <span>Menjadi pribadi yang baik dan ramah</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section class="skills" id="skills">
+
+    <div class="section-title">
+        <small>THINGS I AM LEARNING</small>
+        <h2>My Skills ✨</h2>
+    </div>
+
+    <div class="skill-container">
+
+        <div class="skill-card">
+            <div class="skill-icon">💻</div>
+            <h3>Computer</h3>
+            <p>
+                Mengenal komputer dan mempelajari
+                berbagai teknologi.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">⌨️</div>
+            <h3>Pemrograman</h3>
+            <p>
+                Belajar membuat website dan
+                memahami bahasa pemrograman.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">📚</div>
+            <h3>Learning</h3>
+            <p>
+                Terus belajar, menambah wawasan,
+                dan mencoba hal baru.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HOBIKU -->
+
+<section class="hobby" id="hobby">
+
+    <div class="section-title">
+        <small>MY FAVORITE ACTIVITIES</small>
+        <h2>Hobiku 🌷</h2>
+    </div>
+
+    <div class="hobby-container">
+
+        <div class="hobby-card">
+            <span class="sticker">🕌</span>
+            <h3>Sholat</h3>
+            <p>
+                Menjaga ibadah dan mendekatkan
+                diri kepada Allah.
+            </p>
+        </div>
+
+        <div class="hobby-card">
+            <span class="sticker">📿</span>
+            <h3>Dzikir</h3>
+            <p>
+                Mengingat Allah dan menenangkan
+                hati melalui dzikir.
+            </p>
+        </div>
+
+        <div class="hobby-card">
+            <span class="sticker">📖</span>
+            <h3>Mengaji</h3>
+            <p>
+                Membaca Al-Qur'an dan
+                mempelajari isinya.
+            </p>
+        </div>
+
+        <div class="hobby-card">
+            <span class="sticker">📚</span>
+            <h3>Belajar</h3>
+            <p>
+                Menambah ilmu dan
+                mengembangkan kemampuan diri.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <div class="section-title">
+        <small>LET'S CONNECT</small>
+        <h2>Contact Kuu 💌</h2>
+    </div>
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+
+            <h3>Let's Be Friends!</h3>
+
+            <p>
+                Terima kasih sudah berkunjung
+                ke website kecilku.
+
+                Senang sekali jika kamu ingin
+                mengenalku lebih dekat.
+            </p>
+
+            <div style="margin-top:25px; font-size:12px;">
+                ♡ Nama: Rohmatussolihah
+            </div>
+
+            <div style="margin-top:12px; font-size:12px;">
+                ✉ Email: Rohmatussolihah88@gmail.com
+            </div>
+
+            <div class="contact-icon">💌 🌷</div>
+
+        </div>
+
+        <div class="contact-form">
+
+            <h3>Kirim Pesan ♡</h3>
+
+            <form onsubmit="kirimPesan(event)">
+
+                <input
+                    type="text"
+                    value="Rohmatussolihah"
+                    placeholder="Nama kamu"
+                    required
+                >
+
+                <input
+                    type="email"
+                    value="Rohmatussolihah88@gmail.com"
+                    placeholder="Email kamu"
+                    required
+                >
+
+                <textarea
+                    placeholder="Halo Rohma! Semangat terus ya dalam belajar dan meraih cita-cita. Semoga selalu diberikan kemudahan dan kebahagiaan. ♡"
+                    required></textarea>
+
+                <button type="submit">
+                    Send Message ♡
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+    Made with <span>♡</span> by Rohmatussolihah
+    <br><br>
+    My Little Space © 2026
+</footer>
+
+
+<script>
+
+function kirimPesan(event) {
+
+    event.preventDefault();
+
+    alert("Terima kasih sudah berkunjung ke website Rohma! ♡");
+
+    event.target.reset();
+
+}
+
+</script>
+
+</body>
+</html>
